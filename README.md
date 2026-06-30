@@ -38,6 +38,26 @@ python gc_analysis.py
 .\datasets.exe download genome taxon "organismo" --reference --filename data/output.zip
 ```
 
+## Assembly Downloader
+
+### 30/06 — Implementação do `assembly_downloader.py`
+
+**O que foi feito:**
+Criação do módulo `assembly_downloader.py`, que permite baixar a montagem (assembly) de um genoma completo à escolha do usuário diretamente pelo terminal.
+
+**Como funciona:**
+O módulo utiliza a função `def download_assembly()`, que solicita ao usuário o nome do organismo e o nome do arquivo de saída via `input()`. Em seguida, usa o módulo `subprocess` do Python para executar o `datasets.exe` de dentro do código — como se os comandos fossem digitados manualmente no terminal, mas de forma automatizada via Python.
+
+```python
+subprocess.run([".\\datasets.exe", "download", "genome", "taxon", assembly_taxon, "--reference", "--filename", output_dir])
+```
+
+Cada elemento da lista é executado de forma ordenada pelo `subprocess.run()`.
+
+**Próximos passos:**
+- Permitir escolha da fonte (GenBank, RefSeq)
+- Baixar múltiplas montagens de uma vez
+
 ## Ambiente
 
 - Python 3.14
