@@ -58,6 +58,11 @@ Cada elemento da lista é executado de forma ordenada pelo `subprocess.run()`.
 - Permitir escolha da fonte (GenBank, RefSeq)
 - Baixar múltiplas montagens de uma vez
 
+### 01/07 - Aprimoramento do sistema de busca de genes `gene_downloader.py`
+
+**O que foi feito:**
+Aprimoramento do sistema de busca `downloader.py`, agora `gene_downloader.py`. O novo mecanismo permite a escolha de um organismo do qual o gene específico será baixado.
+
 ## Ambiente
 
 - Python 3.14

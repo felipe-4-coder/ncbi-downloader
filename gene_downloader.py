@@ -5,10 +5,19 @@ import config
 # Contorna problema de certificado SSL em redes corporativas
 ssl._create_default_https_context = ssl._create_unverified_context
 
+# Pede o organismo no terminal
+organism_input = input(f"Organismo [{config.ORGANISM}]: ").strip()
+if organism_input:
+    config.ORGANISM = organism_input
+    print(f"Organismo selecionado: {config.ORGANISM}")
+
 # Pede o gene no terminal
 gene_input = input(f"Gene [{config.GENE}]: ").strip()
 if gene_input:
     config.GENE = gene_input
+
+# Define o nome do arquivo de saída com base no gene e organismo
+fasta_path = os.path.join(config.OUTPUT_DIR, f"{config.GENE}_{config.ORGANISM.replace(' ', '_')}.fasta")
 
 # --- Configuração ---
 Entrez.email = config.EMAIL
@@ -23,10 +32,6 @@ handle = Entrez.esearch(
 ids = Entrez.read(handle)["IdList"]
 handle.close()
 print(f"{len(ids)} sequências encontradas: {ids}")
-
-# --- Download em FASTA ---
-os.makedirs(config.OUTPUT_DIR, exist_ok=True)
-fasta_path = os.path.join(config.OUTPUT_DIR, f"{config.GENE}.fasta")
 
 time.sleep(0.5)
 handle = Entrez.efetch(
