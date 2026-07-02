@@ -5,6 +5,11 @@ import config
 # Contorna problema de certificado SSL em redes corporativas
 ssl._create_default_https_context = ssl._create_unverified_context
 
+# Pede o e-mail que fará a requisição ao NCBI
+email_input = input(f"Email [{config.EMAIL}]: ").strip()
+if email_input:
+    config.EMAIL = email_input
+
 # Pede o organismo no terminal
 organism_input = input(f"Organismo [{config.ORGANISM}]: ").strip()
 if organism_input:
