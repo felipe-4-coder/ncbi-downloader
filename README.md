@@ -66,6 +66,11 @@ Cada elemento da lista é executado de forma ordenada pelo `subprocess.run()`.
 **O que foi feito:**
 Aprimoramento do sistema de busca `downloader.py`, agora `gene_downloader.py`. O novo mecanismo permite a escolha de um organismo do qual o gene específico será baixado.
 
+### 02/07 - Atualiação em `gene_downlaoder.py`
+
+**O que foi feito:**
+Adição da possibilidade de inserir um e-mail próprio para fazer requisições ao NCBI.
+
 ## Ambiente
 
 - Python 3.14
