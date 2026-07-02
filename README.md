@@ -23,6 +23,9 @@ Sou estudante de Biomedicina com foco em genômica e estou aprendendo bioinform�
 
 ## Como usar
 
+## Configuração
+Antes de rodar, edite o `config.py` e substitua `seu@email.com` pelo seu e-mail real.
+
 ### Baixar sequências de um gene
 ```bash
 python downloader.py
