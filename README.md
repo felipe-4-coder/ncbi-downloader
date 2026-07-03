@@ -4,7 +4,9 @@ Projeto de estudo para praticar ferramentas e conceitos básicos de bioinformát
 
 ## O que esse projeto faz
 
-- **downloader.py** — baixa sequências de um gene específico diretamente do NCBI (formato FASTA), com o gene escolhido interativamente pelo terminal
+- - **gene_downloader.py** — baixa sequências de um gene específico diretamente do NCBI (formato FASTA), com escolha interativa do gene, organismo e e-mail via terminal
+- **assembly_downloader.py** — permite baixar a montagem (assembly) de um genoma completo à escolha do usuário, utilizando o módulo `subprocess` para executar o `datasets.exe` de dentro do código
+- **gene_comparison.py** — compara dois genes de organismos diferentes e retorna a taxa de similaridade entre as sequências em %
 - **gc_analysis.py** — calcula o GC content (porcentagem de bases Guanina e Citosina) de um genoma completo a partir de um arquivo `.fna`
 - **datasets.exe** — ferramenta oficial do NCBI para baixar genomas completos (assemblies) via terminal
 - **config.py** — centraliza as configurações do projeto (e-mail, organismo, número de resultados)
