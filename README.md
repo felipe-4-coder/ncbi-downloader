@@ -71,6 +71,17 @@ Aprimoramento do sistema de busca `downloader.py`, agora `gene_downloader.py`. O
 **O que foi feito:**
 Adição da possibilidade de inserir um e-mail próprio para fazer requisições ao NCBI.
 
+## Gene comparison
+
+## 03/07 - Adição do módulo "gene_comparison.py"
+
+**O que foi feito**
+Adição do módulo "gene comparison" que nos permite realizar a comparação de dois genes entre organismos diferentes, após o fim dessa comparação o módulo nos retorna o valor em " % " para a taxa de similaridade entre as bases.
+
+**Resultados obtidos (gene TERT):**
+- *Homo sapiens* vs *Pan troglodytes*: 94.51%
+- *Homo sapiens* vs *Mus musculus*: 65.79%
+
 ## Ambiente
 
 - Python 3.14
