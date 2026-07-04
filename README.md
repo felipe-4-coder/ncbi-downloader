@@ -2,6 +2,16 @@
 
 Projeto de estudo para praticar ferramentas e conceitos básicos de bioinformática usando Python e Biopython.
 
+## Filosofia do projeto
+
+Todo sequenciamento começa com uma pergunta biológica. 
+Este projeto é uma caixa de ferramentas para responder 
+perguntas sobre genomas — desde o download dos dados até 
+a comparação e busca de sequências. As ferramentas aqui 
+desenvolvidas refletem o fluxo real de um projeto de 
+genômica: primeiro entendemos as possibilidades, depois 
+avançamos para as aplicações.
+
 ## O que esse projeto faz
 
 - **gene_downloader.py** — baixa sequências de um gene específico diretamente do NCBI (formato FASTA), com escolha interativa do gene, organismo e e-mail via terminal
