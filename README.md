@@ -20,6 +20,7 @@ avançamos para as aplicações.
 - **gc_analysis.py** — calcula o GC content (porcentagem de bases Guanina e Citosina) de um genoma completo a partir de um arquivo `.fna`
 - **datasets.exe** — ferramenta oficial do NCBI para baixar genomas completos (assemblies) via terminal
 - **config.py** — centraliza as configurações do projeto (e-mail, organismo, número de resultados)
+- **gene_search.py** — busca a presença de um gene específico no arquivo GFF de um genoma, retornando cromossomo, tipo, posição de início e fim, e produto gênico
 
 ## Por que criei esse projeto
 
