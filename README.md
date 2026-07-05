@@ -92,7 +92,29 @@ Adição do módulo "gene comparison" que nos permite realizar a comparação de
 
 **Resultados obtidos (gene TERT):**
 - *Homo sapiens* vs *Pan troglodytes*: 94.51%
-- *Homo sapiens* vs *Mus musculus*: 65.79%
+- *Homo sapiens* vs *Mus musculus*: 65.79%a
+
+## Gene Search
+
+### 05/07 - Adição do módulo `gene_search.py`
+
+**O que foi feito:**
+Adição do módulo `gene_search.py`, que busca a presença ou ausência de um gene específico 
+no arquivo GFF de um genoma. Caso o gene seja encontrado, o módulo retorna:
+
+- Cromossomo onde o gene está localizado
+- Tipo (CDS, exon, gene...)
+- Posição de início e fim no cromossomo
+- Produto gênico
+
+**Aprendizado:**
+Buscar por locus tag é mais preciso do que buscar pelo nome do gene, pois nomes são ambíguos 
+mas locus tags são únicos. Para genomas desconhecidos ou mal anotados, o BLAST é a ferramenta 
+ideal para identificar genes antes de buscá-los no GFF.
+
+**Próximos passos:**
+- Integrar BLAST ao projeto para identificação de genes desconhecidos
+- Melhorar o sistema de busca para aceitar múltiplos termos
 
 ## Ambiente
 
