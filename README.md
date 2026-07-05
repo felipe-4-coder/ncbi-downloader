@@ -46,8 +46,33 @@ Sou estudante de Biomedicina com foco em genômica e estou aprendendo bioinform�
 
 ## Como usar
 
-## Configuração
+### Configuração
 Antes de rodar, edite o `config.py` e substitua `seu@email.com` pelo seu e-mail real.
+
+### Baixar sequências de um gene
+```bash
+python gene_downloader.py
+```
+
+### Calcular GC content de um assembly
+```bash
+python gc_analysis.py
+```
+
+### Baixar um genoma completo
+```bash
+python assembly_downloader.py
+```
+
+### Comparar dois genes entre organismos diferentes
+```bash
+python gene_comparison.py
+```
+
+### Buscar um gene no arquivo GFF de um genoma
+```bash
+python gene_search.py
+```
 
 ### Baixar sequências de um gene
 ```bash
