@@ -28,11 +28,21 @@ Sou estudante de Biomedicina com foco em genômica e estou aprendendo bioinform�
 
 ## O que aprendi
 
-- Navegar pelo terminal do Windows (PowerShell)
-- Criar e organizar um projeto Python no VSCode
-- Usar o módulo `Bio.Entrez` para buscar e baixar sequências do NCBI
-- Resolver erros de SSL, caminhos de arquivo e ambiente virtual
-- Calcular GC content de um genoma completo com Biopython
+- Navegar pelo terminal do Windows com mais confiança — buscar arquivos, 
+  pastas e executar comandos com menos dependência de interfaces gráficas
+- Estruturar projetos Python com separação de responsabilidades (um módulo 
+  para cada função)
+- Escrever funções com `def` e entender quando e por que usá-las
+- Usar o módulo `with open()` para leitura de arquivos
+- Formatar saídas com `print()` e f-strings para tornar os dados legíveis
+- Usar o módulo `pairwise2` para comparar sequências de DNA e retornar 
+  similaridade em %
+- Entender a estrutura de arquivos GFF e extrair informações relevantes 
+  como cromossomo, tipo, locus e produto gênico
+- Escrever código com menos dependência do autocomplete — entendendo o 
+  que cada linha faz antes de aceitá-la
+- Compreender que bioinformática começa com uma pergunta biológica: 
+  a ferramenta certa só faz sentido quando a pergunta está clara
 
 ## Como usar
 
@@ -93,7 +103,7 @@ Adição do módulo "gene comparison" que nos permite realizar a comparação de
 
 **Resultados obtidos (gene TERT):**
 - *Homo sapiens* vs *Pan troglodytes*: 94.51%
-- *Homo sapiens* vs *Mus musculus*: 65.79%a
+- *Homo sapiens* vs *Mus musculus*: 65.79%
 
 ## Gene Search
 
