@@ -152,6 +152,42 @@ ideal para identificar genes antes de buscá-los no GFF.
 - Integrar BLAST ao projeto para identificação de genes desconhecidos
 - Melhorar o sistema de busca para aceitar múltiplos termos
 
+## AMR Search
+
+### 07/07 - Adição do módulo `amr_search.py`
+
+**O que foi feito:**
+Implementação do módulo `amr_search.py`, que permite identificar genes de resistência 
+antimicrobiana (AMR) em genomas bacterianos utilizando o BLAST e o banco de dados CARD 
+(Comprehensive Antibiotic Resistance Database).
+
+**Como funciona:**
+
+*Primeira parte — Busca:*
+1. O usuário informa o genoma bacteriano a ser analisado
+2. O módulo executa o BLAST via `subprocess`, comparando o genoma contra o banco do CARD
+3. Um arquivo `resultados.txt` é gerado com todos os hits encontrados
+
+*Segunda parte — Tratamento dos resultados:*
+1. O módulo lê o `resultados.txt` automaticamente
+2. Filtra apenas resultados com identidade ≥ 90%
+3. Exibe de forma limpa: nome do gene, identidade e posição no genoma
+
+**Resultado obtido:**
+Análise da *Klebsiella pneumoniae* (GCF_000240185.1) identificou genes das famílias 
+**TEM** (beta-lactamases), **CTX-M-45** (ESBL) e **APH(6)-Id** (resistência a aminoglicosídeos) 
+— confirmando o perfil multirresistente do isolado.
+
+**Ferramentas utilizadas:**
+- BLAST 2.17.0+
+- CARD 4.0.1
+- `subprocess` do Python
+
+**Próximos passos:**
+- Remover genes duplicados dos resultados
+- Adicionar o mecanismo de resistência de cada gene
+- Expandir para análise de múltiplos genomas simultaneamente
+
 ## Ambiente
 
 - Python 3.14
