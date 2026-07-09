@@ -188,6 +188,15 @@ Análise da *Klebsiella pneumoniae* (GCF_000240185.1) identificou genes das fam�
 - Adicionar o mecanismo de resistência de cada gene
 - Expandir para análise de múltiplos genomas simultaneamente
 
+### 09/07 - Aprimoramento do `amr_search.py`
+
+**O que foi feito:**
+Aprimoramento da função `search_amr_genes()` com a implementação de um dicionário 
+`melhores = {}` que armazena, para cada posição no genoma, apenas o gene com maior 
+identidade. O resultado passou de 1374 linhas com duplicatas para uma lista limpa 
+com o melhor match por posição.
+
+
 ## Ambiente
 
 - Python 3.14

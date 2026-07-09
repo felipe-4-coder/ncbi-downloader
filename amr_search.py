@@ -20,13 +20,26 @@ def search_amr_genes():
 
         # Lê o arquivo de resultados da busca e exibe as informações dos genes encontrados com identidade maior ou igual a 90%, juntamente com informações relevantes, como a posição inicial e final do gene na sequência de DNA analisada.
 
+        # Etapa 1: popular o dicionário
+        melhores = {}
         for linha in resultados:
             columns = linha.split('\t')
             if float(columns[2]) >= 90.0:
-                print(f"Gene: {columns[1].split('|')[-1]}")
-                print(f"Identidade: {columns[2]}%")
-                print(f"Posição inicial: {columns[6]}")
-                print(f"Posição final: {columns[7]}")
-                print("-----------------------------")
+                gene = columns[1].split('|')[-1]
+                identidade = float(columns[2])
+                posicao = columns[6]
+        
+                if posicao not in melhores:
+                    melhores[posicao] = (gene, identidade)
+                else:
+                    if identidade > melhores[posicao][1]:
+                        melhores[posicao] = (gene, identidade)
+
+        # Etapa 2: printar os resultados
+        for posicao, (gene, identidade) in melhores.items():
+            print(f"Gene: {gene}")
+            print(f"Identidade: {identidade}%")
+            print(f"Posição inicial: {posicao}")
+            print("-----------------------------")
                 
 search_amr_genes()
