@@ -16,6 +16,16 @@ def search_amr_genes():
     # Executa o comando para realizar a busca de genes de resistência a antimicrobianos.
     subprocess.run(["blastn", "-query", dna_sequence_file, "-db", amr_database, "-out", f"{output_dir}/resultados.txt", "-outfmt", "6", "-perc_identity", "90"])
 
+    # Carrega o banco de dados AMR presetes em aro.tsv
+    mecanismo = {}
+    with open("data/card-ontology/aro.tsv", "r") as aro_file:
+        for line in aro_file:
+            columns = line.strip().split('\t')
+            if len(columns) >= 3:
+                nome_gene = columns[1]
+                descricao = columns[2]
+                mecanismo[nome_gene] = descricao
+
     with open(f"{output_dir}/resultados.txt", "r") as resultados:
 
         # Lê o arquivo de resultados da busca e exibe as informações dos genes encontrados com identidade maior ou igual a 90%, juntamente com informações relevantes, como a posição inicial e final do gene na sequência de DNA analisada.
@@ -40,6 +50,7 @@ def search_amr_genes():
             print(f"Gene: {gene}")
             print(f"Identidade: {identidade}%")
             print(f"Posição inicial: {posicao}")
+            print(f"Mecanismo: {mecanismo.get(gene, 'Não encontrado')}")
             print("-----------------------------")
                 
 search_amr_genes()

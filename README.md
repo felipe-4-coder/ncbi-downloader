@@ -201,6 +201,22 @@ Aprimoramento da função `search_amr_genes()` com a implementação de um dicio
 identidade. O resultado passou de 1374 linhas com duplicatas para uma lista limpa 
 com o melhor match por posição.
 
+### 09/07 - Adição do mecanismo de resistência ao `amr_search.py`
+
+**O que foi feito:**
+O módulo agora cruza os genes encontrados pelo BLAST com o arquivo `aro.tsv` do CARD, 
+retornando para cada gene encontrado:
+
+- Nome do gene
+- Identidade com o banco de dados CARD
+- Posição no genoma
+- Descrição do mecanismo de resistência
+
+**Resultado obtido:**
+A *Klebsiella pneumoniae* analisada apresenta genes de resistência a carbapenêmicos 
+(KPC-2), cefalosporinas de 3ª geração (CTX-M-14), aminoglicosídeos (rmtB, APH) e 
+sulfonamidas (sul1, sul2) — confirmando perfil de multirresistência grave.
+
 
 ## Ambiente
 
