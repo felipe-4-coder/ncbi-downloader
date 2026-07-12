@@ -18,7 +18,7 @@ def search_amr_genes():
 
     # Carrega o banco de dados AMR presetes em aro.tsv
     mecanismo = {}
-    with open("data/card-ontology/aro.tsv", "r") as aro_file:
+    with open("data/references/card-ontology/aro.tsv", "r") as aro_file:
         for line in aro_file:
             columns = line.strip().split('\t')
             if len(columns) >= 3:
