@@ -3,3 +3,4 @@ __pycache__/
 .venv/
 functions_biopython.py
 inspecionando_fasta.py
+aula3.py

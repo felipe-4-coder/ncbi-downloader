@@ -22,6 +22,10 @@ avançamos para as aplicações.
 - **config.py** — centraliza as configurações do projeto (e-mail, organismo, número de resultados)
 - **gene_search.py** — busca a presença de um gene específico no arquivo GFF de um genoma, retornando cromossomo, tipo, posição de início e fim, e produto gênico
 
+- **amr_search.py** — identifica genes de resistência antimicrobiana (AMR) em genomas 
+bacterianos comparando contra o banco de dados CARD via BLAST, retornando gene, 
+identidade, posição no genoma e descrição do mecanismo de resistência
+
 ## Por que criei esse projeto
 
 Sou estudante de Biomedicina com foco em genômica e estou aprendendo bioinformática de forma prática. Esse projeto foi meu primeiro contato real com acesso programático a dados do NCBI.
@@ -93,6 +97,16 @@ python gc_analysis.py
 ```bash
 .\datasets.exe download genome taxon "organismo" --reference --filename data/output.zip
 ```
+
+### Buscar genes de resistência antimicrobiana (AMR)
+```bash
+python amr_search.py
+```
+> Requer: BLAST instalado e banco de dados CARD indexado.
+> Para indexar o CARD:
+> ```bash
+> makeblastdb -in data/references/card-ontology/nucleotide_fasta_protein_homolog_model.fasta -dbtype nucl -out data/references/card_db/card_db
+> ```
 
 ## Assembly Downloader
 
@@ -220,6 +234,8 @@ sulfonamidas (sul1, sul2) — confirmando perfil de multirresistência grave.
 
 ## Ambiente
 
+- BLAST 2.17.0+
+- CARD 4.0.1 (nucleotide_fasta_protein_homolog_model.fasta + aro.tsv)
 - Python 3.14
 - Biopython
 - NCBI Datasets CLI v18.31.0
