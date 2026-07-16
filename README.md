@@ -77,10 +77,7 @@ python gene_comparison.py
 ```bash
 python gene_search.py
 ```
-### Buscar genes de resistência antimicrobiana (AMR)
-```bash
-python amr_search.py
-```
+
 > Requer: BLAST instalado e banco de dados CARD indexado (`makeblastdb`)
 
 ### Baixar sequências de um gene
