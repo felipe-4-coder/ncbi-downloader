@@ -7,7 +7,7 @@ def search_amr_genes():
     # Solicita ao usuário o caminho do arquivo de sequência de DNA que será analisado.
     dna_sequence_file = input("Digite o caminho do arquivo de sequência de DNA a ser analisado: ")
 
-    # Solicita ao usuário o banco de ados que será usado para realizar a comparação e busca de genes de resistência a antibióticos.
+    # Solicita ao usuário o banco de dados que será usado para realizar a comparação e busca de genes de resistência a antibióticos.
     amr_database = input("Digite o caminho do banco de dados AMR (Antimicrobial Resistance) que será utilizado para a comparação e busca:")
 
     # Solicita ao usuário o diretório onde os resultados ficarão armazenados.
